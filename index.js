@@ -71,7 +71,9 @@ function handleCompressed(res, _write, _end, unzip, zip, callback) {
             _end.call(res);
         });
 
-        res.setHeader('content-length', body.length);
+        if(!res.getHeaders()['transfer-encoding'] || res.getHeaders()['transfer-encoding'].toLowerCase() !== 'chunked') {
+            res.setHeader('content-length', body.length);
+        }
         zip.write(body);
         zip.end();
     });
@@ -100,7 +102,9 @@ function handleUncompressed(res, _write, _end, callback) {
         body = new Buffer(body);
 
         // Call the response method
-        res.setHeader('content-length', body.length);
+        if (!res.getHeaders()['transfer-encoding'] || res.getHeaders()['transfer-encoding'].toLowerCase() !== 'chunked') {
+            res.setHeader('content-length', body.length);
+        }
         _write.call(res, body);
         _end.call(res);
     };
