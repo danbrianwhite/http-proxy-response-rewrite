@@ -1,5 +1,5 @@
 {
-  "name": "http-proxy-response-rewrite",
+  "name": "http-proxy-response-rewrite-danbrianwhite",
   "version": "0.0.1",
   "description": "Rewrite the response body from http-proxy.",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/saskodh/http-proxy-response-rewrite.git"
+    "url": "git+https://github.com/danbrianwhite/http-proxy-response-rewrite"
   },
   "keywords": [
     "http-proxy",
@@ -17,13 +17,14 @@
   ],
   "authors": [
     "Sashe Klechkovski <sasko_dh@hotmail.com>",
-    "XianFa Lang <xianfalang@gmail.com>"
+    "XianFa Lang <xianfalang@gmail.com>",
+    "Daniel White <danbrianwhite@gmail.com>"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/saskodh/http-proxy-response-rewrite/issues"
+    "url": "https://github.com/danbrianwhite/http-proxy-response-rewrite/issues"
   },
-  "homepage": "https://github.com/saskodh/http-proxy-response-rewrite#readme",
+  "homepage": "https://github.com/danbrianwhite/http-proxy-response-rewrite#readme",
   "dependencies": {
     "bufferhelper": "^0.2.1",
     "concat-stream": "^1.5.1"
